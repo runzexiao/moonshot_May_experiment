@@ -1,0 +1,11 @@
+<launch>
+    <!-- rosserial -->
+    <node pkg="rosserial_python" type="serial_node.py" name="tcp_node" args="tcp" respawn="true"/>
+
+    <!-- joy -->
+    <node pkg="joy" type="joy_node" name="joy_con" respawn="true"/>
+
+    <!-- joycon_ope-->
+    <node pkg="icp_control" type="joycon_ope.py" name="joycon_ope" respawn="true"/>
+
+</launch>
