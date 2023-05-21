@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="joy" type="joy_node" name="joy_node" />
+
+  <node pkg="blower_control" type="joycon_ope.py" name="blower_control" />
+
+  <node pkg="cugo_control" type="joycon_ope_3.py" name="cugo_control" />
+
+  <node pkg="rosserial_server" type="socket_node" name="rosserial_socket_node" />
+
+  <node pkg="rosserial_python" type="message_info_service.py" name="rosserial_message_info_service" />
+
+</launch>
+
